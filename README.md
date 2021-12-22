@@ -1,81 +1,33 @@
-# MinecraftJS
+# Welcome to React three fiber Minecraft
 
-MinecraftJS brings the best-selling PC game "Minecraft" into the web with the power of javascript.
+This project is just me trying to mimic Minecraft in React.
+How i did it can be seen in this Youtube video:
+[![Video preview](https://img.youtube.com/vi/aWQmuTiThTs/0.jpg)](https://www.youtube.com/watch?v=aWQmuTiThTs)
 
-# Motivation
+Demo: https://minecraft-js.vercel.app/
 
-Having to open an additional app to play a game is sometimes too tiring. Therefore, we thought it'd be interesting to somehow implement Minecraft with javascript, essentially bringing the whole Minecraft game into the web. This not only takes away the tedious process of installing the game, it also brings the entire game to players with a couple clicks.
+## How to play?
 
-# Screenshots
+Currently it has 5 types of blocks: Grass, Wood, Log, Glass and Dirt.
+You switch blocks with numbers 1-5 on your keyboard.
+You navigate the world with the mouse and WASD.
+You can click to add blocks and Q+Click to remove blocks.
+You world is stored in your browsers local storage.
 
-Simple and working terrain generation
-![](https://i.imgur.com/KMg9TUs.png)
+![Preview](preview.png 'Preview')
 
-Ability to build and break blocks
-![](https://i.imgur.com/vRnmoMQ.png)
+## Want to extend, develop modify?
 
-# Build Stack
+If you do so or just build a cool world. Please share it with me dbark@hey.com or https://twitter.com/barelydaniel
 
-Javascript.
+In the project directory, you can run:
 
-## Frontend
+### `npx start`
 
-- [react.js](https://reactjs.org/)
-- [react-router](https://github.com/ReactTraining/react-router)
-- [apollo](https://www.apollographql.com/)
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Backend
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-- [prisma](https://www.prisma.io/docs/1.34/get-started/01-setting-up-prisma-new-database-TYPESCRIPT-t002/)
-- [graphql-yoga](https://github.com/prisma/graphql-yoga)
-
-## Authentication
-
-- [bcryptjs](https://github.com/dcodeIO/bcrypt.js/)
-- [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken#readme)
-
-# Features
-
-- Player registration
-- Save worlds
-- Database support
-
-# Installation
-
-Before cloning the repo or doing anything, be sure to install [docker](https://www.docker.com/) and [node](https://nodejs.org/en/) on your computer. After that, run the following commands:
-
-```bash
-# Clone the repo
-git clone https://github.com/ian13456/minecraft.js.git
-
-# Download packages for server and client with:
-npm install
-
-# Start docker containers
-cd server/prisma
-docker-compose up -d
-
-# Start backend service
-cd server
-npm start
-
-# Start frontend service
-cd client
-npm start
-```
-
-After these commands, visit `localhost:3000`
-
-# To-do's
-
-- Lighting
-- Chat system
-- Command system
-- Better terrain generation (caves)
-- Random structures (villages)
-- Inventory system
-- Trivial things such as
-  - Block breaking cooldowns
-  - Special items (swords, pickaxes)
-- Better UI designs
-- Dockerize the entire project altogether
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
