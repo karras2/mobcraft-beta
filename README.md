@@ -1,30 +1,81 @@
-# Hello website!
+# MinecraftJS
 
-This is a basic HTML starter project you can build on however you like. No need to save. While you develop your site, your changes will happen ✨ immediately in the preview window. On the left you'll see the files that make up your site, including HTML, JavaScript, and CSS. You can upload assets like images or audio in `assets`. The rest is up to you and your imagination. 🦄
+MinecraftJS brings the best-selling PC game "Minecraft" into the web with the power of javascript.
 
-## What's in this project?
+# Motivation
 
-← `README.md`: That's this file, where you can tell people what your cool website does and how you built it.
+Having to open an additional app to play a game is sometimes too tiring. Therefore, we thought it'd be interesting to somehow implement Minecraft with javascript, essentially bringing the whole Minecraft game into the web. This not only takes away the tedious process of installing the game, it also brings the entire game to players with a couple clicks.
 
-← `index.html`: This is the main web page for your site. The HTML defines the structure and content of the page using _elements_. You'll see references in the HTML to the JS and CSS files. Try clicking the image in the center of the page!
+# Screenshots
 
-← `style.css`: CSS files add styling rules to your content. The CSS applies styles to the elements in your HTML page. The style rules also make the image move when you click it.
+Simple and working terrain generation
+![](https://i.imgur.com/KMg9TUs.png)
 
-← `script.js`: If you're feeling fancy you can add interactivity to your site with JavaScript. The code in the JavaScript file runs when the page loads, and when the visitor clicks the button you can add below.
+Ability to build and break blocks
+![](https://i.imgur.com/vRnmoMQ.png)
 
-Open each file and check out the comments (in gray) for more info.
+# Build Stack
 
-## Try this next 🏗️
+Javascript.
 
-Take a look in `TODO.md` for next steps you can try out in your new site!
+## Frontend
 
-___Want a minimal version of this project to build your own website? Check out [Blank Website](https://glitch.com/edit/#!/remix/glitch-blank-website)!___
+- [react.js](https://reactjs.org/)
+- [react-router](https://github.com/ReactTraining/react-router)
+- [apollo](https://www.apollographql.com/)
 
-![Glitch](https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2FLogo_Color.svg?v=1602781328576)
+## Backend
 
-## You built this with Glitch!
+- [prisma](https://www.prisma.io/docs/1.34/get-started/01-setting-up-prisma-new-database-TYPESCRIPT-t002/)
+- [graphql-yoga](https://github.com/prisma/graphql-yoga)
 
-[Glitch](https://glitch.com) is a friendly community where millions of people come together to build web apps and websites.
+## Authentication
 
-- Need more help? [Check out our Help Center](https://help.glitch.com/) for answers to any common questions.
-- Ready to make it official? [Become a paid Glitch member](https://glitch.com/pricing) to boost your app with private sharing, more storage and memory, domains and more.
+- [bcryptjs](https://github.com/dcodeIO/bcrypt.js/)
+- [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken#readme)
+
+# Features
+
+- Player registration
+- Save worlds
+- Database support
+
+# Installation
+
+Before cloning the repo or doing anything, be sure to install [docker](https://www.docker.com/) and [node](https://nodejs.org/en/) on your computer. After that, run the following commands:
+
+```bash
+# Clone the repo
+git clone https://github.com/ian13456/minecraft.js.git
+
+# Download packages for server and client with:
+npm install
+
+# Start docker containers
+cd server/prisma
+docker-compose up -d
+
+# Start backend service
+cd server
+npm start
+
+# Start frontend service
+cd client
+npm start
+```
+
+After these commands, visit `localhost:3000`
+
+# To-do's
+
+- Lighting
+- Chat system
+- Command system
+- Better terrain generation (caves)
+- Random structures (villages)
+- Inventory system
+- Trivial things such as
+  - Block breaking cooldowns
+  - Special items (swords, pickaxes)
+- Better UI designs
+- Dockerize the entire project altogether
